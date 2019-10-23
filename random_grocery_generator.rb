@@ -14,6 +14,13 @@ def items
 	]
 end
 
+
+def consolidate_cart(array)
+  array.collect { |items| items.include }
+
+
+
+
 def coupons
 	[
 		{:item => "AVOCADO", :num => 2, :cost => 5.00},
