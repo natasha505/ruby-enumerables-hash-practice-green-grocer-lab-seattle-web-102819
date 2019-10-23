@@ -15,9 +15,18 @@ def items
 end
 
 
-def consolidate_cart(array)
-  array.collect { |items| items.include }
-
+def consolidate_cart(cart)
+  hash = {}
+  cart.each do |item_hash|
+    item_hash.each do |name, price_hash|
+      if hash[name].nil?
+        hash[name = price_hash.mege({:count => 1)
+      else
+        hash[name][:count] += 1
+      end
+  end
+  hash
+end
 
 
 
